@@ -1,8 +1,263 @@
-<html<
-  <head<
-  <title> Holaa</html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parfums Árabes Escuintla GT</title>
+  <meta name="description" content="Perfumes árabes originales | Sellados y decants | Envíos a toda Guatemala" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  <h1>Hola</h1>
+  <!-- Top bar -->
+  <div class="topbar" role="note">
+    <div class="container topbar__inner">
+      <span>📦 Envíos a toda Guatemala</span>
+      <span class="dot">•</span>
+      <span>💳 Pago con tarjeta (+ recargo)</span>
+      <span class="dot">•</span>
+      <span>🚚 Pago contra entrega disponible (+ recargo)
+        
+      </span>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img class="brand__logo" src="./assets/logo.png" alt="Parfums Árabes Escuintla GT" onerror="this.style.display='none'">
+        <div class="brand__text">
+          <div class="brand__name">Parfums Árabes Escuintla GT</div>
+          <div class="brand__sub">📲 3699-4521</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#como-comprar">Cómo comprar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Cambiar tema">
+          🌙
+        </button>
+
+        <button class="btn btn--primary" id="openCartBtn" type="button" aria-label="Abrir carrito">
+          🛒 <span class="cartBadge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="hero" aria-label="Portada">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <!-- Cambia esta imagen por tu portada -->
+      <img
+        class="hero__img"
+        src="../assets/portada.jpge"
+        alt="Portada Parfums Árabes"
+        loading="eager"
+        onerror="this.style.display='none'"
+      />
+
+      <div class="container hero__content">
+        <div class="hero__card">
+          <p class="hero__pill">🔥 Originales | Sellados & Decants</p>
+          <h1 class="hero__title">Perfumes árabes con olor a “wow” desde la primera salida</h1>
+          <p class="hero__subtitle">
+            Entrega rápida, asesoría para elegir, y compra fácil por WhatsApp.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#catalogo">Ver catálogo</a>
+            <button class="btn btn--ghost" type="button" id="whatsAppBtnHero">
+              Finalizar por WhatsApp
+            </button>
+          </div>
+
+          <div class="hero__meta">
+            <span>✅ Larga duración</span>
+            <span>✅ Para hombre y mujer</span>
+            <span>✅ Recomendación según clima</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Catálogo</h2>
+            <p class="section__sub">Selecciona tus perfumes y agrégalos al carrito.</p>
+          </div>
+
+          <div class="catalog__tools">
+            <input class="input" id="searchInput" type="search" placeholder="Buscar (ej. Yara, Hawas, Khamrah)..." />
+            <select class="select" id="filterSelect" aria-label="Filtrar">
+              <option value="all">Todos</option>
+              <option value="sellado">Sellados</option>
+              <option value="decant">Decants</option>
+              <option value="hombre">Hombre</option>
+              <option value="mujer">Mujer</option>
+              <option value="unisex">Unisex</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- How to buy -->
+    <section class="section section--soft" id="como-comprar">
+      <div class="container">
+        <h2 class="section__title">Cómo comprar</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div class="step__body">
+              <h3>Elige tus perfumes</h3>
+              <p>Busca por nombre o filtra por tipo (sellado/decant).</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__num">2</div>
+            <div class="step__body">
+              <h3>Agrega al carrito</h3>
+              <p>Se guarda tu selección y puedes ajustar cantidades.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step__num">3</div>
+            <div class="step__body">
+              <h3>Finaliza por WhatsApp</h3>
+              <p>Se genera el mensaje automático con tu pedido.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contacto">
+      <div class="container contact">
+        <div>
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__sub">
+            Escríbenos y te recomendamos según tu gusto (dulce, fresco, intenso, etc.).
+          </p>
+
+          <div class="contact__cards">
+            <a class="cardLink" id="whatsAppBtnFooter" href="#" role="button">
+              <div class="cardLink__title">WhatsApp</div>
+              <div class="cardLink__sub">📲 3699-4521</div>
+            </a>
+
+            <a class="cardLink" href="#catalogo">
+              <div class="cardLink__title">Ver catálogo</div>
+              <div class="cardLink__sub">Elige y arma tu carrito</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="noteBox">
+          <h3>Metodos de Pagos</h3>
+          <ul>
+            <li>✅ Efectivo (Area de Escuintla)</li>
+            <li>✅ Transferencia/Previo deposito</li>
+            <li>✅ Tarjeta (puede aplicar recargo)</li>
+            <li>✅ Pago contra entrega (puede aplicar minimo recargo)</li>
+          </ul>
+
+          <h3>Envíos</h3>
+          <p>Envíos a toda Guatemala. Pregunta por tiempo y costo según tu zona.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrito">
+    <div class="drawer__overlay" id="drawerOverlay" tabindex="-1"></div>
+
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="drawer__head">
+        <h2 class="drawer__title" id="cartTitle">Tu carrito</h2>
+        <button class="iconBtn" id="closeCartBtn" type="button" aria-label="Cerrar carrito">✕</button>
+      </div>
+
+      <div class="drawer__body">
+        <div class="cartEmpty" id="cartEmpty">
+          <p>Tu carrito está vacío.</p>
+          <a class="btn btn--primary" href="#catalogo" id="goCatalogBtn">Ir al catálogo</a>
+        </div>
+
+        <div class="cartList" id="cartList"></div>
+      </div>
+
+      <div class="drawer__foot">
+        <div class="totals">
+          <div class="totals__row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">Q0.00</strong>
+          </div>
+          <small class="muted">*El envío se cotiza por WhatsApp según zona.</small>
+        </div>
+
+        <div class="cartActions">
+          <button class="btn btn--ghost" id="clearCartBtn" type="button">Vaciar carrito</button>
+          <button class="btn btn--primary" id="checkoutWhatsBtn" type="button">Finalizar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Parfums Árabes Escuintla GT</span>
+      <span class="muted">Hecho con ❤️ en Guatemala</span>
+    </div>
+  </footer>
+
+<!-- Modal Pago -->
+<div class="payModal" id="payModal" aria-hidden="true">
+  <div class="payModal__overlay" id="payModalOverlay"></div>
+
+  <div class="payModal__panel" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+    <h3 id="payTitle">Elige tu método de pago</h3>
+
+    <label class="payOption">
+      <input type="radio" name="payMethod" value="Transferencia Bancaria" checked />
+      <span>Transferencia Bancaria</span>
+    </label>
+
+    <label class="payOption">
+      <input type="radio" name="payMethod" value="Pago contra entrega" />
+      <span>Pago contra entrega</span>
+    </label>
+
+    <label class="payOption">
+      <input type="radio" name="payMethod" value="tarjeta credito/debito" />
+      <span>Tarjeta credito/debito</span>
+    </label>
+
+
+    <div class="payModal__actions">
+      <button class="btn btn--ghost" id="payCancelBtn" type="button">Cancelar</button>
+      <button class="btn btn--primary" id="payConfirmBtn" type="button">Continuar a WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+  <script src="./app.js"></script>
 </body>
 </html>
